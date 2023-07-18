@@ -21,6 +21,7 @@ let source = fromEvent(document, 'mousemove').pipe(
     // filter((value: mouseTrack) => value.x < 500),
     delay(100)
     
+    
 );
 
 // Função chamada quando um valor é emitido pelo Observable.
