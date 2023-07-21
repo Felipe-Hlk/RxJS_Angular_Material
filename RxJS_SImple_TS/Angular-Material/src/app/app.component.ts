@@ -1,13 +1,10 @@
-import { Component, OnInit } from '@angular/core'
-import {BreakpointObserver} from '@angular/cdk/layout'
+import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { fromEvent, map } from 'rxjs';
-
 
 export const SCROLL_CONTAINER = 'mat-sidenav-content';
 export const TEXT_LIMIT = 50;
 export const SHADOW_LIMIT = 100;
-
-
 
 @Component({
   selector: 'app-root',
@@ -15,47 +12,37 @@ export const SHADOW_LIMIT = 100;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
-  public smallScreen = false;
+  public isSmallScreen = false;
   public popText = false;
   public applyShadow = false;
 
-  constructor(private breakpointObserver: BreakpointObserver){ }
+  constructor(private breakpointObserver: BreakpointObserver) { }
+
   ngOnInit(): void {
     const content = document.getElementsByClassName(SCROLL_CONTAINER)[0];
-    console.log (content);
 
-    fromEvent (content, 'scroll')
-    .pipe(
-      map(() => content.scrollTop)
-    )
-    .subscribe({
-      next: (value: number) => this.determineHeader(value)
-    })
+    fromEvent(content, 'scroll')
+      .pipe(
+        map(() => content.scrollTop)
+      )
+      .subscribe({
+        next: (value: number) => this.determineHeader(value)
+      })
   }
 
-  determineHeader (scrollTop: number){
+  determineHeader(scrollTop: number) {
     console.log(scrollTop)
     this.popText = scrollTop >= TEXT_LIMIT;
     this.applyShadow = scrollTop >= SHADOW_LIMIT;
   }
 
-
-
-  ngAfterContentInit(): void{
-    this.breakpointObserver.observe(['(max-width: 800px)']).subscribe({
-      next: (res) => {                 //res = retorno
-        if (res.matches){
-          this.smallScreen = true;
-        }else{
-          this.smallScreen = false;
-        }
-      }
-    })
+  ngAfterContentInit(): void {
+    this.breakpointObserver
+        .observe(['(max-width: 800px)'])
+        .subscribe((res) => this.isSmallScreen = res.matches);
   }
 
   get sidenavMode() {
-    return this.smallScreen ? 'over' : 'side';
+    return this.isSmallScreen ? 'over' : 'side';
   }
-
 }
