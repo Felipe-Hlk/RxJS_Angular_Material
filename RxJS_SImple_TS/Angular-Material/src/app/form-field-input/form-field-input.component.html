@@ -1,1 +1,15 @@
-<p>form-field-input works!</p>
+<h1>Inputs</h1>
+
+<mat-form-field  color="accent">
+  <mat-label>Name</mat-label>
+  <input type="text" matInput placeholder="Name"  [(ngModel)]="value">
+  <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-form-field  color="accent">
+  <mat-label>Last Name</mat-label>
+  <input type="text" matInput placeholder="Last Name" >
+  <mat-icon matSuffix>tag_faces</mat-icon>
+</mat-form-field>
