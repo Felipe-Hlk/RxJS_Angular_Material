@@ -10,12 +10,14 @@ import { ButtonsIconsComponent } from './buttons-icons/buttons-icons.component';
 import { FormFieldInputComponent } from './form-field-input/form-field-input.component';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonsIconsComponent,
-    FormFieldInputComponent
+    FormFieldInputComponent,
+    ProgressSpinnerComponent
   ],
   imports: [
     BrowserModule,
