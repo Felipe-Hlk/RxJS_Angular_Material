@@ -10,3 +10,11 @@
   [mode]="queryMode"
   color="warn">
 </mat-progress-bar>
+<br>
+<h1> PlayBack </h1>
+<mat-progress-bar
+  mode="buffer"
+  [value]="loadingPercent"
+  [bufferValue]="currentPlayBack"
+  color="accent">
+</mat-progress-bar>
