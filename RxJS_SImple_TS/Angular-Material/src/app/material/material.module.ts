@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -23,7 +24,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatInputModule,
     MatListModule,
     MatProgressSpinnerModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTabsModule
   ]
 })
 export class MaterialModule { }
