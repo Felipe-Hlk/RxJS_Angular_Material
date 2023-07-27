@@ -10,6 +10,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 
 
@@ -29,6 +31,8 @@ import {MatTableModule} from '@angular/material/table';
     MatProgressBarModule,
     MatTabsModule,
     MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ]
 })
