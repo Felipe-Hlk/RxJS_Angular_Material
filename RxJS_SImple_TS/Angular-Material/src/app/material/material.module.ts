@@ -9,6 +9,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 
@@ -25,7 +27,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatListModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule,
+
   ]
 })
 export class MaterialModule { }
