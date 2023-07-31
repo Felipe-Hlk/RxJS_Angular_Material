@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-snackbar',
@@ -6,5 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./snackbar.component.scss']
 })
 export class SnackbarComponent {
+  durationInSeconds = 5;
 
+  constructor(private _snackBar: MatSnackBar) {}
+
+  openSnackBar() {
+    this._snackBar.openFromComponent(AppSnackExampleComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
+  }
+}
+
+@Component({
+  selector: 'app-snack-example',
+  template: `
+    <span class="example-snack">
+      Example Snackbar!!!
+    </span>
+  `,
+  styles: [`
+    .example-snack {
+      color: green;
+    }
+  `],
+})
+export class AppSnackExampleComponent {
+  constructor(private snackBarRef: MatSnackBarRef<AppSnackExampleComponent>) { }
 }

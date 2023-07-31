@@ -1,1 +1,8 @@
-<p>snackbar works!</p>
+<mat-form-field color="warn">
+  <mat-label>Snack bar duration (seconds)</mat-label>
+  <input type="number" [(ngModel)]="durationInSeconds" matInput>
+</mat-form-field>
+
+<button mat-stroked-button color="accent" (click)="openSnackBar()" aria-label="Show an example snack-bar">
+  Press to Example
+</button>
