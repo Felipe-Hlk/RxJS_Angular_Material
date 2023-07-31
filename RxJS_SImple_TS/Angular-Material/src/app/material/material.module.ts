@@ -11,10 +11,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-
-
-
+import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 
 
 @NgModule({
@@ -34,6 +31,13 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatDatepickerModule,
     MatNativeDateModule
 
+  ],
+  declarations:[],
+  providers:[
+    {
+      provide: MAT_DATE_LOCALE, useValue: 'pt-br'
+    }
   ]
 })
+
 export class MaterialModule { }

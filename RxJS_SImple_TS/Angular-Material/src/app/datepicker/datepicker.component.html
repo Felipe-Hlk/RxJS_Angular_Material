@@ -1,8 +1,20 @@
 
-<mat-form-field class="example-full-width">
+<mat-form-field color="accent" class="example-full-width">
   <mat-label>Choose a date</mat-label>
-  <input matInput [matDatepicker]="picker">
-  <mat-hint>MM/DD/YYYY</mat-hint>
-  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
+  <input
+    matInput
+    [matDatepicker]="picker"
+    [max]=""
+  >
+  <mat-hint>DD/MM/YYYY</mat-hint>
+  <mat-datepicker-toggle
+    matIconSuffix [for]="picker"
+  >
+  </mat-datepicker-toggle>
+  <mat-datepicker
+    #picker
+    [touchUi]="true"
+    [touchUi]="isTouchDevice"
+  >
+  </mat-datepicker>
 </mat-form-field>
