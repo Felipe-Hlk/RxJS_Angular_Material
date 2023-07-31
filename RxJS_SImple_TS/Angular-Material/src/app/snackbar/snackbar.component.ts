@@ -22,7 +22,7 @@ export class SnackbarComponent {
   selector: 'app-snack-example',
   template: `
     <span class="example-snack">
-      Example Snackbar!!!
+        Agendamento Realizado com Sucesso!!!
     </span>
   `,
   styles: [`
