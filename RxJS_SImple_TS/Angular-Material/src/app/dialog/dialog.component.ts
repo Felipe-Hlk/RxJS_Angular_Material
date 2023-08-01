@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DialogModalComponent } from './dialog-modal/dialog-modal.component';
 
 @Component({
@@ -9,11 +9,14 @@ import { DialogModalComponent } from './dialog-modal/dialog-modal.component';
 })
 export class DialogComponent {
 
-  constructor(private dialog: MatDialog)  {
-  }
+  constructor(private dialog: MatDialog) {}
 
-  public openDialog() {
-    this.dialog.open(DialogModalComponent);
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true; // Impede que o dialog seja fechado ao clicar fora dele
+    // dialogConfig.width = '500px'; // Você também pode definir outras configurações do dialog, como a largura
+
+    this.dialog.open(DialogModalComponent, dialogConfig);
   }
 
 }
