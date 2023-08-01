@@ -11,12 +11,30 @@ export class DialogComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  openDialog() {
+  public openDialog() {
+
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true; // Impede que o dialog seja fechado ao clicar fora dele
     // dialogConfig.width = '500px'; // Você também pode definir outras configurações do dialog, como a largura
 
     this.dialog.open(DialogModalComponent, dialogConfig);
+
   }
 
+
+
 }
+
+
+
+/*
+
+openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true; // Impede que o dialog seja fechado ao clicar fora dele
+    // dialogConfig.width = '500px'; // Você também pode definir outras configurações do dialog, como a largura
+
+    this.dialog.open(DialogModalComponent, dialogConfig);
+
+  }
+ */

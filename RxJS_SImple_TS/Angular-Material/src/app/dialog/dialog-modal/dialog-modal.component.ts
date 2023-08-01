@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+
 
 
 export interface PeriodicElement {
@@ -28,7 +29,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class DialogModalComponent {
 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: string
+  ) { }
+
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
+  
 }
