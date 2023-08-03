@@ -15,6 +15,8 @@ import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
 import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     MatMomentDateModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
+    MatSortModule
 
   ],
   declarations:[],
