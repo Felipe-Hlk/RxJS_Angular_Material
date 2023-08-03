@@ -16,6 +16,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { DialogModalComponent } from './dialog/dialog-modal/dialog-modal.component';
+import { DatatableComponent } from './datatable/datatable.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DialogModalComponent } from './dialog/dialog-modal/dialog-modal.compone
     DatepickerComponent,
     SnackbarComponent,
     DialogComponent,
-    DialogModalComponent
+    DialogModalComponent,
+    DatatableComponent
   ],
   imports: [
     BrowserModule,
